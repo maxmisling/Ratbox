@@ -40,7 +40,7 @@
     map.on('click', ({ point }) => {
       // If the user clicked on one of your markers, get its information.
       const features = map.queryRenderedFeatures(point, {
-        layers: ['testgreen'] // replace with your layer name
+        layers: ['clues (1)','starts'] // replace with your layer name
       });
       if (!features.length) {
         return;
