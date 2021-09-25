@@ -1,3 +1,6 @@
+	<img src="mushroom.png" alt="testimage">
+
+
 <!DOCTYPE HTML>
 <html>
 
