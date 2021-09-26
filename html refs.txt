@@ -1,0 +1,2 @@
+	<img src="mushroom.png" alt="testimage">
+
