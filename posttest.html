@@ -1,0 +1,39 @@
+<html> 
+<body> 
+<?php 
+$myText = filter_input(INPUT_POST,’myText’,FILTER_SANITIZE_STRING); 
+//check if data has been submitted 
+if( !empty($myText) 
+{ 
+/* 
+OTHER INPUT FILTERING TECHNIQUES OF YOUR CHOICE HERE. DO NOT TRUST USER INPUT EVER. 
+YOU SHOULD REALLY USE PREPARED STATEMENTS TO REDUCE CHANCE OF DIRECT INJECTION HACKS - BUT FOR DEMONSTRATION PURPOSES, HERE IS A SIMPLE QUERY (YOU’LL NEED A MYSQL DATABASE FOR THIS). 
+*/ 
+$conn = mysqli_connect("localhost","user","kohmakbananapancakes","postflux"); 
+// Check connection 
+if (mysqli_connect_errno()) 
+ { 
+ echo "<div class=’errorMessage’>Failed to connect to MySQL: " . mysqli_connect_error().”</div>”; 
+ } 
+//format query string 
+$queryString = ‘INSERT INTO table_name(column_name) VALUES(‘.$myText.’)’; 
+// Perform query 
+$res = mysqli_query($conn,$queryString); 
+//check success 
+if ($res) 
+{ 
+ echo "<div class=’successMessage’>New record created successfully</div>"; 
+} 
+else 
+{ 
+ echo "<div class=’errorMessage’>Error: " . $sql . "<br>" . $query . "<br>" .$conn->error.”</div>”; 
+} 
+mysqli_close($conn); 
+}//end post check conditional 
+?> 
+<form action=’thispage’ method=’post’> 
+<input type=’text’ name=’myText’ /> 
+<input type=’submit’ name=’submit’ value=’submit’ /> 
+</form> 
+</body> 
+</html>
