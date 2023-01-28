@@ -1,7 +1,7 @@
 <html> 
 <body> 
 
- 
+<?php
 <!-- $con = mysqli_connect("localhost","your_localhost_database_user","your_localhost_database_password","your_localhost_database_db") -->
 $conn = mysqli_connect("localhost","Z.Y.N","kohmakbananapancakes","postflux"); 
 // Check connection 
@@ -10,7 +10,7 @@ if (mysqli_connect_errno())
  echo "<div class=’errorMessage’>Failed to connect to MySQL: " . mysqli_connect_error().”</div>”; 
  } 
 
- 
+?> 
 <form action=’thispage’ method=’post’> 
 <input type=’text’ name=’myText’ /> 
 <input type=’submit’ name=’submit’ value=’submit’ /> 
