@@ -14,7 +14,7 @@ let x = setInterval(function () {
   let difference = countDownDateTime - dateTimeNow;
   
   // Unix countdown value
-  // ucountValue.innerHTML = difference;
+  ucountValue.innerHTML = difference;
   
   // calculating time and assigning values
   daysValue.innerHTML = Math.floor(
