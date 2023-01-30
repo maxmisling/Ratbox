@@ -13,6 +13,9 @@ let x = setInterval(function () {
   const dateTimeNow = new Date().getTime();
   let difference = countDownDateTime - dateTimeNow;
   
+  // Unix countdown value
+  ucountValue.innerHTML = difference;
+  
   // calculating time and assigning values
   daysValue.innerHTML = Math.floor(
     difference / (1000 * 60 * 60 * 24)
