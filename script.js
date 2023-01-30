@@ -1,7 +1,5 @@
 // counting days to new year
-const beaconActivation = new Date('February 17, 23 21:20:27 GMT+00:00');
-const countDownDateTime = beaconActivation.getTime();
-
+const countDownDateTime = new Date(2023, 1, 1, 0, 0, 0).getTime();
 const daysValue = document.querySelector("#days");
 const hoursValue = document.querySelector("#hours");
 const minutesValue = document.querySelector("#minutes");
@@ -13,14 +11,12 @@ let x = setInterval(function () {
   let difference = countDownDateTime - dateTimeNow;
   
   // calculating time and assigning values
-  daysValue.innerHTML = Math.floor(
-    difference / (1000 * 60 * 60 * 24)
-  );
+  daysValue.innerHTML = Math.floor(difference / (1000 * 60 * 60 * 24));
   hoursValue.innerHTML = Math.floor(
   (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
   );
   minutesValue.innerHTML = Math.floor(
-    (difference % (1000 * 60 * 60)) / (1000 * 60)
+  (difference % (1000 * 60 * 60)) / (1000 * 60)
   );
   secondsValue.innerHTML = Math.floor((difference % (1000 * 60)) / 1000);
   
