@@ -20,8 +20,8 @@ body {
 .countdown-timer-container div {
  width: 25%;
  text-align: center;
- font-size: 30px;
+ font-size: 20px;
 }
 .countdown-timer-values {
- font-size: 60px !important;
+ font-size: 20px !important;
 }
