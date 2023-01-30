@@ -7,9 +7,9 @@ body {
  width: 100%;
  height: 100vh;
  display: flex;
- justify-content: center;
- align-items: center;
- background-color: #EEE;
+ justify-content: left;
+ align-items: left;
+ background-color: white;
 }
 .countdown-timer-container {
  width: 100%;
